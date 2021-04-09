@@ -1,0 +1,30 @@
+#menu a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #DAA520;
+    text-decoration: none;
+    font-family: Helvetica,Arial,Sans-Serif;
+  }
+
+.aboutMe{
+    background-color: #ffffdf;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 200%;
+    }
+
+table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    line-height: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    }

@@ -1,55 +1,60 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
+
+<!DOCTYPE html>
     <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+    <link href="{% static 'css/style.css' %}"  rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 </head>
+<style>
+    body{
+      font-family: 'Yeon Sung', cursive;
+    }
+</style>
 <body>
-        <div id="menu" style="text-align: center;">
-            <a href="hw1.html">HOME</a>
-            <a href="about.html"><b>ABOUT</b></a>
-            <a href="career.html">CAREER</a>
-            <a href="education.html">EDUCATION</a>
+        <div style="text-align: center;">
+            <center>
             <br><br>
-            <hr color= "#b3871a" width="50%" size="0.1px">
             <br>
-        
-        <table>
+            <table>
+                <colgroup>
+                    <col style="width:30%;">
+                    <col style="width:70%;">
+                </colgroup>
             <tr>
-                <th> 성별 : </th>
-                <td> 여자 </td>
+                <th> Name. </th>
+                 <td> Shin yejin </td>
             </tr>
             <tr>
-                <th> 나이 : </th>
-                <td> 22 </td>
+                <th> <i class="fas fa-birthday-cake"></i>  </th>
+                <td> Feb 12, 2000 </td>
             </tr>
             <tr>
-                <th> 학교 : </th>
-                <td> 동국대학교 </td>
+                <th> <i class="fas fa-school"></i> </th>
+                <td> 동국대학교 정보통신공학과 전공 </td>
             </tr>
             <tr>
-                <th> 학과 : </th>
-                <td> 정보통신공학과 </td>
-            </tr>
-            <tr>
-                <th> 학번 : </th>
-                <td> 2019112*** </td>
-            </tr>
-            <tr>
-                <th> email : </th>
+                <th> <i class="fas fa-envelope-square"></i> </th>
                 <td> shinyejin0212@gmail.com </td>
             </tr>
+            <tr>
+                <th> <i class="fab fa-instagram"></i> </th>
+                <td> shynnn._ </td>
+            </tr>
         </table>
-
-        
+    </center>
         <h>현재 멋사 부원으로 활동 중!<br>개발 천재가 될테다!!<br></h3>
             <br><br>
     </div>
        
 </body>
 </html>
+{% endblock %}

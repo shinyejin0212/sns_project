@@ -1,0 +1,21 @@
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+
+.hi{
+    font-family: 'Yeon Sung', cursive;
+}
+
+.english{
+    font-family: 'Yeon Sung', cursive;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+  }
+.korean{
+    font-family: 'Yeon Sung', cursive;
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+  }

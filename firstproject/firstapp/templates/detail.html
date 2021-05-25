@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-
+<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+<style>
+    *{
+      font-family: 'Yeon Sung', cursive;
+    }
+  </style>
 <h1>{{post.title}}</h1>
 작성자 : {{post.writer}}
 날짜 : {{post.pub_date}}

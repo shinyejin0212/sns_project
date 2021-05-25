@@ -54,7 +54,22 @@
         <h>현재 멋사 부원으로 활동 중!<br>개발 천재가 될테다!!<br></h3>
             <br><br>
     </div>
-       
+    <h2><a href="{%url 'new'%}">글 쓰기</a></h2>
+    <h1>글 목록</h1>
+    <hr>
+    <div>
+        {% for post in posts %}
+        <div>
+            <h3>{{post.title}}</h3>
+            {{post.writer}}<br>
+            {{post.summary}}
+            <a href = "{%url 'detail' post.id %}">...자세히</a>
+            <hr>
+            <br>
+        </div>
+        {%endfor%}
+    </div>
+
 </body>
 </html>
 {% endblock %}

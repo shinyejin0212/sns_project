@@ -25,4 +25,7 @@ urlpatterns = [
     path('os/', views.os, name="os"),
     path('dc/', views.dc, name="dc"),
     path('curriculum/', views.curriculum, name="curriculum"),
+    path('<str:id>', views.detail, name="detail"),
+    path('new/', views.new, name="new"),
+    path('create/', views.create, name= "create")
 ]

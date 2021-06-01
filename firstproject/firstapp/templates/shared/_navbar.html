@@ -15,30 +15,30 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffffdf;">
-  <a class="navbar-brand" href="{% url 'home'%}">녜게로 오라</a>
+  <a class="navbar-brand" href="{% url 'firstapp:home'%}">녜게로 오라</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home'%}">Home </a>
+        <a class="nav-link" href="{% url 'firstapp:home'%}">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'about'%}">about</a>
+        <a class="nav-link" href="{% url 'firstapp:about'%}">about</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'career'%}">career</a>
+        <a class="nav-link" href="{% url 'firstapp:career'%}">career</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'os'%}">Operating System</a>
-          <a class="dropdown-item" href="{% url 'dc'%}">Data Communication</a>
+          <a class="dropdown-item" href="{% url 'firstapp:os'%}">Operating System</a>
+          <a class="dropdown-item" href="{% url 'firstapp:dc'%}">Data Communication</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{% url 'curriculum'%}">curriculum</a>
+          <a class="dropdown-item" href="{% url 'firstapp:curriculum'%}">curriculum</a>
         </div>
       </li>
     </ul>

@@ -9,10 +9,13 @@
   </style>
 
 <div class="container">
-    <h1>{{user.username}}</h1>
+    <h1>{{user.username}}</h1><hr>
     <div>
-        {% for blog in blogs %}
-            <a href = " {%url 'firstapp:detail' post.id %}">{{post.title}}</a><hr>
+        {% for post in posts %}
+            <h3><a href = " {%url 'firstapp:detail' post.id %}">{{post.title}}</a></h3>
+            {{post.writer}}<br>
+            {{post.summary}}
+            <a href = "{% url 'firstapp:detail' post.id %}">...자세히</a><hr>
             {% endfor %}
     </div>
 </div>

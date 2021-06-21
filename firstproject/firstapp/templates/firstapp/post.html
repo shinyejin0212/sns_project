@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/style.css' %}"  rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+      font-family: 'Yeon Sung', cursive;
+    }
+</style>
+<body>
+    <h2><a href="{% url 'firstapp:new' %}">글 쓰기</a></h2>
+    {% if user.is_authenticated %}
+    <h1>글 목록</h1>
+    <hr>
+    <div>
+        {% for post in posts %}
+        <div>
+            <h3>{{post.title}}</h3>
+            {{post.writer}}<br>
+            {{post.summary}}
+            <a href = "{% url 'firstapp:detail' post.id %}">...자세히</a>
+            <hr>
+            <br>
+        </div>
+        {% endfor %}
+        
+    </div>
+    {% else %}
+        <h3>로그인 후 이용 가능</h3>
+        <a href = "{% url 'account_login' %}" class="btn btn-warning">로그인</a>
+        <a href = "{% url 'account_signup' %}" class="btn btn-warning">회원가입</a>
+        {% endif %}
+    </body>
+{% endblock %}

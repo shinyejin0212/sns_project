@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+<style>
+    *{
+      font-family: 'Yeon Sung', cursive;
+    }
+  </style>
+
+<div class="container">
+    <h1>{{user.username}}</h1>
+    <div>
+        {% for blog in blogs %}
+            <a href = " {%url 'firstapp:detail' post.id %}">{{post.title}}</a><hr>
+            {% endfor %}
+    </div>
+</div>
+
+
+</div>
+
+{% endblock %}

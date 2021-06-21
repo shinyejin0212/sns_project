@@ -30,9 +30,12 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'firstapp:career'%}">career</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'firstapp:post'%}">post</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Study
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{% url 'firstapp:os'%}">Operating System</a>
@@ -40,6 +43,18 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{% url 'firstapp:curriculum'%}">curriculum</a>
         </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expended="false">Account</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {% if user.is_authenticated %}
+          <li><a class="dropdown-item" href ="{% url 'users:mypage' %}">Mypage</a></li>
+          <li><a class="dropdown-item" href ="{% url 'account_logout' %}">Logout</a></li>
+          {% else %}
+          <li><a class="dropdown-item" href ="{% url 'account_login' %}">Login</a></li>
+          <li><a class="dropdown-item" href ="{% url 'account_signup' %}">Signup</a></li>
+          {% endif %}
+        </ul>
       </li>
     </ul>
   </div>

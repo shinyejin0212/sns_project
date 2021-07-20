@@ -47,7 +47,6 @@ def edit(request, id):
     edit_post = Post.objects.get(id =id)
     return render(request, 'firstapp/edit.html', {'post': edit_post})
 
-
 def update(request, id):
     update_post = Post.objects.get(id=id)
     update_post.title=request.POST['title']
